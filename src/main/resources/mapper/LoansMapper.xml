@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.api.mapper.LoansMapper">
+<insert id="insertWhitelist" >
+    INSERT INTO approval.approval_whitelist_user (mobile,nik,name,partner_name,type,flag,created_at,updated_at,lob) VALUES
+    (#{mobile},#{nik},'','UFI',2,1,now() ,now() ,'Dana Bergulir');
+</insert>
+</mapper>

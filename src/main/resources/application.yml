@@ -1,0 +1,135 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /finance-test
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+#spring:
+#  datasource:
+    #    驱动
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.114.101/fund?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    password: ksOHn5SUTSRF^blc
+#    username: john
+spring:
+  rabbitmq:
+    fat:
+      host: 192.168.114.6
+      port: 5672
+      username: welend
+      password: wewe
+    dev:
+      host: 192.168.114.26
+      port: 5672
+      username: welend
+      password: wewe
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+#        master:
+#          url: jdbc:mysql://192.168.114.101/finance?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+#          username: john
+#          password: ksOHn5SUTSRF^blc
+#          driver-class-name: com.mysql.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+#        slave_1:
+#          url: jdbc:mysql://192.168.114.101/fund?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+#          username: john
+#          password: ksOHn5SUTSRF^blc
+#          driver-class-name: com.mysql.jdbc.Driver
+#        slave_2:
+#          url: jdbc:mysql://192.168.114.101/pay_gateway?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+#          username: john
+#          password: ksOHn5SUTSRF^blc
+#          driver-class-name: com.mysql.jdbc.Driver
+#        slave_3:
+#          url: jdbc:mysql://192.168.114.101/komodo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+#          username: john
+#          password: ksOHn5SUTSRF^blc
+#          driver-class-name: com.mysql.jdbc.Driver
+#        slave_4:
+#          url: jdbc:mysql://192.168.114.101/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+#          username: john
+#          password: ksOHn5SUTSRF^blc
+#          driver-class-name: com.mysql.jdbc.Driver
+#        slave_5:
+#          url: jdbc:mysql://192.168.114.101/business?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+#          username: john
+#          password: ksOHn5SUTSRF^blc
+#          driver-class-name: com.mysql.jdbc.Driver
+          #开发环境
+        master:
+          url: jdbc:mysql://192.168.114.101/finance?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+        slave_1:
+          url: jdbc:mysql://192.168.114.101/fund?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        slave_2:
+          url: jdbc:mysql://192.168.114.101/pay_gateway?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        slave_3:
+          url: jdbc:mysql://192.168.114.101/komodo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        slave4:
+          url: jdbc:mysql://192.168.114.101/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        devslave4:
+          url: jdbc:mysql://192.168.114.102/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        slave5:
+          url: jdbc:mysql://192.168.114.101/business?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        devslave5:
+          url: jdbc:mysql://192.168.114.102/business?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+          username: john
+          password: ksOHn5SUTSRF^blc
+          driver-class-name: com.mysql.jdbc.Driver
+        #生产
+#        master:
+#          url: jdbc:mysql://rm-k1a94w9xw1k78288w.mysql.ap-southeast-5.rds.aliyuncs.com/finance?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#          username: jubin_zhang
+#          password: u^VTJ&ok1jH6
+#          driver-class-name: com.mysql.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+#        slave_1:
+#          url: jdbc:mysql://rm-k1a94w9xw1k78288w.mysql.ap-southeast-5.rds.aliyuncs.com/fund?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#          username: jubin_zhang
+#          password: u^VTJ&ok1jH6
+#          driver-class-name: com.mysql.jdbc.Driver
+#        slave_2:
+#          url: jdbc:mysql://rm-k1a94w9xw1k78288w.mysql.ap-southeast-5.rds.aliyuncs.com/pay_gateway?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#          username: jubin_zhang
+#          password: u^VTJ&ok1jH6
+#          driver-class-name: com.mysql.jdbc.Driver
+#        slave_3:
+#          url: jdbc:mysql://rm-k1a94w9xw1k78288w.mysql.ap-southeast-5.rds.aliyuncs.com/komodo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#          username: jubin_zhang
+#          password: u^VTJ&ok1jH6
+#          driver-class-name: com.mysql.jdbc.Driver
+#控制台打印sql
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    
+logging:
+  config:
+    classpath: logback.xml
+  pattern:
+    file: "[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n"
+    path: D:/202006/webUIApiTest06/webUIApiTest02/target

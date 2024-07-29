@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.api.mapper.UpfrontDuesMapper">
+	<select id="getRateConfig"  resultType="Map">
+		SELECT
+			kf.fund_name,
+			kp.admin_rate,
+			kf.fund_interest_type,
+			kf.fund_interest_rate,
+			kf.service_fee_rate,
+			kf.fund_provision_rate,
+			kp.late_rate,
+			kp.advance_rate,
+			kf.extend,
+			kp.provision_rate 
+		FROM
+			komodo.fund_rate_config kf,
+			komodo.product_rate_config kp 
+		WHERE
+			kf.product_rate_id = kp.id 
+			AND kf.fund_id = #{fundId} 
+			AND kp.second_prod_code = #{secondProdCode}
+	</select>
+	<select id="getPromotionRateConfig"  resultType="Map">
+		SELECT
+			mar.upfront_fee,
+			mar.interest,
+			mar.overdue,
+			mar.admin_fee,
+			mar.principal,
+			mar.preferential_type
+		FROM
+			marketing.activity_code ma,
+			marketing.activity_code_rule mac,
+			marketing.activity_rule mar 
+		WHERE
+			ma.id = mac.activity_code_id 
+			AND mac.activity_rule_id = mar.id 
+			AND ma.CODE = #{promotionCode}
+	</select>
+	<select id="getVatWht" resultType="java.lang.String">
+			SELECT
+				mbc.config_value 
+			FROM
+				marketing.backstage_configs mbc 
+			WHERE
+				mbc.config_key = #{configKey}
+	</select>
+</mapper>

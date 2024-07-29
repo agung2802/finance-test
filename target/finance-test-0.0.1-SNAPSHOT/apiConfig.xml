@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<rootUrl>http://japi-fat.maucash.id</rootUrl>
+	<headers name="Content-Type">
+		<header name="json" value="application/json"></header>
+		<header name="form" value="application/x-www-form-urlencoded"></header>
+<!--		<header name="upload" value="multipart/form-data"></header>-->
+	</headers>
+	<headers name="applyHeader">
+		<header name="x-org-id" value="1"></header>
+		<header name="x-origin" value="H5"></header>
+<!-- 		<header name="x-app-version" value="2.4.6_test"></header>
+ -->		<header name="x-product-code" value="YN-MAUCASH"></header>
+		<header name="x-source-id" value="h5"></header>			
+	</headers>
+	<headers name="branchesweb">
+		<header name="x-operated-product" value="YN-MAUCASH"></header>
+		<header name="x-org-id" value="3"></header>
+		<header name="x-origin" value="maucash-branches-web"></header>		
+	</headers>
+    <headers name="collectionweb">
+		<header name="X-org-id" value="2"></header>
+        <header name="X-origin" value="collection-web"></header>
+		<header name="json" value="application/json"></header>
+	</headers>
+	<headers name="DAYA">
+		<header name="X-Operated-Product" value="YN-DAYA"></header>
+		<header name="x-org-id" value="107"></header>
+		<header name="x-origin" value="YN-DAYA"></header>
+	</headers>
+	<headers name="SMP">
+		<header name="X-Operated-Product" value="YN-SMP"></header>
+		<header name="x-org-id" value="109"></header>
+		<header name="x-origin" value="YN-SMP"></header>
+	</headers>
+	<headers name="TRIO">
+		<header name="X-Operated-Product" value="YN-TRIO"></header>
+		<header name="x-org-id" value="104"></header>
+		<header name="x-origin" value="YN-TRIO"></header>
+	</headers>
+	<headers name="HSO">
+		<header name="X-Operated-Product" value="YN-HSO"></header>
+		<header name="x-org-id" value="101"></header>
+		<header name="x-origin" value="HSO-WEB"></header>
+	</headers>
+	<params>
+		<param name="email" value="3rt8d@mail.com"></param>
+		<param name="asScore" value="520"></param>
+		<param name="secondProdCode" value="maucash_long"></param>
+	</params>
+
+</root>

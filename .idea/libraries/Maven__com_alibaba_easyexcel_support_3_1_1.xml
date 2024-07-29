@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.alibaba:easyexcel-support:3.1.1">
+    <CLASSES>
+      <root url="jar://D:/2018/auto/maven/apache-maven-3.3.9/maven-repository/com/alibaba/easyexcel-support/3.1.1/easyexcel-support-3.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/2018/auto/maven/apache-maven-3.3.9/maven-repository/com/alibaba/easyexcel-support/3.1.1/easyexcel-support-3.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/2018/auto/maven/apache-maven-3.3.9/maven-repository/com/alibaba/easyexcel-support/3.1.1/easyexcel-support-3.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

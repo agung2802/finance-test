@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<suite name="Suite" parallel="false" >-->
+<!--<suite name="Suite"  data-provider-thread-count="5">-->
+<suite name="Suite"  >
+    <parameter name="configXmlPath" value="src/test/resources/apiConfig.xml"></parameter>
+  	<parameter name="excelPath" value="src/test/resources/case.xlsx"></parameter>
+  	<parameter name="propertiesPath" value="src/test/resources/ktp.properties"></parameter>
+  <test name="Test">
+    <classes>
+<!--       <class name="com.test.api.cases.Register"/>
+      <class name="com.test.api.cases.Login"/>
+      <class name="com.test.api.cases.UserProfile"/> -->
+      <class name="com.test.api.cases.FinanceTest"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.api.mapper.FinanceTradingMapper">
+	<select id="getFinanceTradingList"
+		resultType="com.test.api.entity.FinanceTrading">
+		select * from finance.finance_trading
+	</select>
+	<update id="updateCreditLimit">
+		update komodo.loan_credit_limit set wd_device_id =#{wdDeviceId} where
+		loan_number=#{loanNumber}
+	</update>
+	<insert id="insertMonthlySalary">
+		INSERT INTO komodo.user_profiles_approval(user_id,
+		monthly_salary, created_at, updated_at)
+		VALUES (#{userId}, #{monthlySalary}, #{createdAt}, #{updatedAt})
+	</insert>
+	<insert id="insertBankAccount">
+		INSERT INTO pay_gateway.gateway_bank_account( name, account_number, fund_id,
+		bank_code, extend_id) VALUES ('test', '830888846081', 0, 'MANDIRI',
+		'test');
+	</insert>
+	<select id="findProductRateConfig" resultType="Map">
+		select * from komodo.product_rate_config kpr where kpr.second_prod_code =
+		#{secondProdCode}
+	</select>
+	<select id="findFundRateConfig" resultType="Map">
+		select * from komodo.fund_rate_config kfr where kfr.fund_id=#{fundId} and
+		kfr.product_rate_id=#{productRateId}
+	</select>
+	<select id="findinsuranceConfig" resultType="Map">
+		select id, second_product_code, type, amount_coverage, premium_amount,
+		status, created_at, updated_at from marketing.insurance_config
+		WHERE second_product_code = #{secondProdCode};
+	</select>
+</mapper>
